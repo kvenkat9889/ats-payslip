@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .payslip {
+            width: 98%;
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 6px #b3b3b3;
+        }
+
+        .details, .table {
+            margin-bottom: 20px;
+        }
+
+        .details p {
+            margin: 5px 0;
+        }
+
+        .table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f4f4f4;
+        }
+
+        .table .total {
+            font-weight: bold;
+        }
+
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .payslip {
+                width: 100%;
+                padding: 15px;
+                box-shadow: none; /* Optional: remove shadow on mobile */
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .table table {
+                font-size: 14px;
+            }
+
+            .signatures {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .signatures p {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Tablet Responsiveness */
+        @media screen and (max-width: 1024px) {
+            .payslip {
+                width: 95%;
+            }
+
+            .signatures {
+                font-size: 14px;
+            }
+
+            .table th, .table td {
+                padding: 10px;
+            }
+        }
+
+        /* Small Devices (Phones in Portrait) */
+        @media screen and (max-width: 480px) {
+            .payslip {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .table th, .table td {
+                padding: 6px;
+            }
+
+            .signatures {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="payslip">
+        <h1>PAYSLIP</h1>
+        <p><strong>Company:</strong> Astrolite Tech Solutions</p>
+        <p><strong>Address:</strong> Uppal, Hyderabad</p>
+        <hr>
+        <div class="details">
+            <p><strong>Date of Joining:</strong> 2018-06-23</p>
+            <p><strong>Pay Period:</strong> August 2021</p>
+            <p><strong>Employee Name:</strong>Kunchala Venkatesh</p>
+            <p><strong>Employee ID:</strong>ATS0143</p>
+            <p><strong>Designation:</strong> Junior Software Developer</p>
+            <p><strong>Department:</strong> IT</p>
+            <p><strong>Worked Days:</strong> 26</p>
+        </div>
+        <div class="table">
+            <h3>Earnings</h3>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Basic</td><td>10000</td></tr>
+                    <tr><td>Education Allowance</td><td>200</td></tr>
+                    <tr><td>House Rent Allowance</td><td>5000</td></tr>
+                    <tr><td>Bonus</td><td>2000</td></tr>
+                    <tr><td>Other Allowances</td><td>16133</td></tr>
+                    <tr class="total"><td>Total Earnings</td><td>33333</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table">
+            <h3>Deductions</h3>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Professional Tax</td><td>200</td></tr>
+                    <tr class="total"><td>Total Deductions</td><td>200</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><strong>Net Pay:</strong> 33,133</p>
+        <div class="signatures">
+            <p>Employer Signature</p>
+            <p>Employee Signature</p>
+        </div>
+    </div>
+</body>
+</html>
